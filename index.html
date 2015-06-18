@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charles Whitfield</title>
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="elements/builtin.html">
+</head>
+
+<body class="fullbleed layout vertical">
+  <template is="dom-bind" id="app">
+    <paper-drawer-panel>
+      <paper-header-panel drawer>
+        <paper-toolbar><div>Index</div></paper-toolbar>
+        <paper-menu selected="{{page}}" valueattr="page-name">
+          <paper-item>About</paper-item>
+          <paper-item>Projects</paper-item>
+          <paper-item>Resume</paper-item>
+        </paper-menu>
+      </paper-header-panel>
+      <paper-header-panel main>
+        <paper-toolbar>
+          <paper-icon-button paper-drawer-toggle icon="menu"></paper-icon-button>
+          <div>Charles Whitfield</div>
+          <span flex></span>
+        </paper-toolbar>
+        <div class="container">
+          <iron-pages selected="{{page}}" valueattr="page-name">
+            <section page-name="About">
+              <paper-material elevation="1">Hello</paper-material>
+            </section>
+            <section page-name="Projects">
+              <paper-material elevation="1">
+              <h2>Halle</h2>
+              <p>Halle is an Android & iOS app designed to crowd-source information on parking spaces for drivers in urban areas. The application is built in Javascript with a Rails-API backend, utilizing Apache Cordova, jQuery Mobile, Google Maps API, Firebase and Facebook OAuth to bring users a live-updating true mobile experience.</p>
+              </paper-material>
+            </section>
+            <section page-name="Resume">
+              <paper-material elevation="1">Resume</paper-material>
+            </section>
+          </iron-pages>
+        </div>
+      </paper-header-panel>
+    </paper-drawer-panel>
+  </template>
+</body>
+
+</html>
