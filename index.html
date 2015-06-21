@@ -6,6 +6,7 @@
   <title>Charles Whitfield</title>
   <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   <link rel="import" href="elements/builtin.html">
+  <link rel="import" href="elements/project-halle.html">
 </head>
 
 <body class="fullbleed layout vertical">
@@ -28,16 +29,17 @@
         <div class="container">
           <iron-pages selected="{{page}}" valueattr="page-name">
             <section page-name="About">
-              <paper-material elevation="1">Hello</paper-material>
+              <paper-material elevation="1">I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</paper-material>
             </section>
             <section page-name="Projects">
               <paper-material elevation="1">
-              <h2>Halle</h2>
-              <p>Halle is an Android & iOS app designed to crowd-source information on parking spaces for drivers in urban areas. The application is built in Javascript with a Rails-API backend, utilizing Apache Cordova, jQuery Mobile, Google Maps API, Firebase and Facebook OAuth to bring users a live-updating true mobile experience.</p>
+                <project-halle></project-halle>
               </paper-material>
             </section>
             <section page-name="Resume">
-              <paper-material elevation="1">Resume</paper-material>
+              <paper-material elevation="1">
+              <object data="files/charles.svg" type="image/svg+xml" width="100%" height="100%"></object>
+              </paper-material>
             </section>
           </iron-pages>
         </div>

@@ -1,0 +1,26 @@
+<link rel="import" href="../bower_components/polymer/polymer.html"
+<dom-module id="project-halle">
+  <style>
+    h1 {
+      display: inline;
+    }
+
+    #icon {
+      width: 8em;
+      display: inline-block;
+    }
+  </style>
+  <template>
+    <img id="icon" src="../images/halleplayicon.png"/>
+    <h1>Halle</h1>
+    <a href="https://play.google.com/store/apps/details?id=com.halle.parking">
+    <img alt="Android app on Google Play"
+         src="../images/play_store.png" /></a>
+    <p>Halle is an Android & iOS app designed to crowd-source information on parking spaces for drivers in urban areas. The application is built in Javascript with a Rails-API backend, utilizing Apache Cordova, jQuery Mobile, Google Maps API, Firebase and Facebook OAuth to bring users a live-updating true mobile experience.</p>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "project-halle",
+  })
+</script>
