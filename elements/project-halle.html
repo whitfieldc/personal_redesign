@@ -1,8 +1,15 @@
-<link rel="import" href="../bower_components/polymer/polymer.html"
+<link rel="import" href="../bower_components/polymer/polymer.html">
 <dom-module id="project-halle">
   <style>
     h1 {
-      display: inline;
+      display: inline-block;
+      position: absolute;
+      top: 0px;
+      margin: 0.35em;
+    }
+
+    .paper-font-display2 {
+      @apply(--paper-font-display2);
     }
 
     #halle_icon {
@@ -11,25 +18,56 @@
     }
 
     img.playstore_icon {
-      display: block;
+      display: inline-block;
+      position: relative;
+      width: 7em;
+      /*float: right;*/
+      top: 0px;
+      margin: .75em;
+      /*right: 0px;*/
     }
 
     paper-item.thumbnail {
       display: inline-block;
+      margin-top: 1em;
+      /*margin-bottom: 1em;*/
+    }
+
+    .tech-list {
+      font-family: 'Roboto', 'Noto', sans-serif;
+      font-size: 1.25em;
+      font-weight: 500;
+    }
+
+    .container {
+      padding: 0px;
+    }
+
+    .debug {
+      /*border: 1px solid red;*/
     }
 
 
   </style>
   <template>
-    <div>
-    <img id="halle_icon" src="../images/halleplayicon.png"/>
-    <h1>Halle</h1>
-    <div>
-    <a href="https://play.google.com/store/apps/details?id=com.halle.parking">
-    <img  id="playstore_icon"
-          alt="Android app on Google Play"
-          src="../images/play_store.png" /></a>
-    <p>Halle is an Android & iOS app designed to crowd-source information on parking spaces for drivers in urban areas. The application is built in Javascript with a Rails-API backend, utilizing Apache Cordova, jQuery Mobile, Google Maps API, Firebase and Facebook OAuth to bring users a live-updating true mobile experience.</p>
+    <div class="debug container">
+      <div class="debug header">
+        <img id="halle_icon" class="debug" src="../images/halleplayicon.png"/>
+        <h1 class="paper-font-display2 debug">Halle</h1>
+        <a id="playstore_link" href="https://play.google.com/store/apps/details?id=com.halle.parking">
+        <img class="debug playstore_icon"
+              alt="Android app on Google Play"
+              src="../images/play_store.png" /></a>
+      </div>
+    </div>
+    <paper-item class="debug body">
+      <paper-item-body class="debug tech-list">
+      <iron-icon icon="device:storage"></iron-icon> Apache Cordova | Rails-API | jQuery | jQuery Mobile | Google Maps API | Firebase | Facebook OAuth
+      </paper-item-body>
+    </paper-item>
+    <paper-item><paper-item-body>
+      <div>Halle is an Android & iOS app designed to crowd-source information on parking spaces for drivers in urban areas. The application is built in Javascript with a Rails-API backend, utilizing Apache Cordova, jQuery Mobile, Google Maps API, Firebase and Facebook OAuth to bring users a live-updating true mobile experience.</div>
+      <a href="http://mobt.me/BlJo">Try it in a mobile emulator here</a></paper-item>
     <paper-item class="thumbnail">
       <paper-item-body two-line>
       <div>Halle main UI</div>

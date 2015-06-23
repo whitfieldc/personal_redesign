@@ -13,7 +13,7 @@
   <template is="dom-bind" id="app">
     <paper-drawer-panel>
       <paper-header-panel drawer>
-        <paper-toolbar><div>Index</div></paper-toolbar>
+        <paper-toolbar><div class="header-text">Index</div></paper-toolbar>
         <paper-menu selected="{{page}}" valueattr="page-name">
           <paper-item>About</paper-item>
           <paper-item>Projects</paper-item>
@@ -23,13 +23,17 @@
       <paper-header-panel main>
         <paper-toolbar>
           <paper-icon-button paper-drawer-toggle icon="menu"></paper-icon-button>
-          <div>Charles Whitfield</div>
+          <div class="header-text">Charles Whitfield</div>
           <span flex></span>
         </paper-toolbar>
         <div class="container">
           <iron-pages selected="{{page}}" valueattr="page-name">
             <section page-name="About">
-              <paper-material elevation="1">I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</paper-material>
+              <paper-material elevation="1">
+              <p>I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</p>
+
+              <p> I'm starting to dig in to client-side frameworks like Angular, React, and Twitter's Flight. I'm going to return to Python, a language I briefly studied before starting Dev Bootcamp. As a long-time Android geek, I'm also interested in exploring Java and Android development. Finally, Elixir and the Phoenix framework have piqued my interest lately. I'd love an opportunity to explore the world of functional programming.</p>
+            </paper-material>
             </section>
             <section page-name="Projects">
               <paper-material elevation="1">
@@ -46,6 +50,13 @@
       </paper-header-panel>
     </paper-drawer-panel>
   </template>
+  <script>
+    document.addEventListener('WebComponentsReady', function () {
+      var app = document.querySelector('iron-pages');
+      // console.log(app.items);
+      app.selected = 0;
+    });
+</script>
 </body>
 
 </html>
