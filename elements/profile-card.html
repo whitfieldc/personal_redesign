@@ -1,0 +1,64 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="profile-card">
+  <style>
+    paper-material.container {
+      padding: .5em;
+      background-color: #C5CAE9;
+    }
+/*    .splash {
+      margin: 0px;
+      background-color: #80DEEA;
+      position: relative;
+      z-index: -1;
+    }*/
+
+    .rnd-img {
+      border-radius: 100%;
+      max-width: 25%;
+      display: inline-block;
+      position: relative;
+      /*top: .5em;*/
+      left: .5em;
+      @apply(--shadow-elevation-3dp)
+    }
+
+    .card {
+      /*@apply(--shadow-elevation-3dp)*/
+      position: relative;
+      display: inline-block;
+      font-family: 'Roboto', 'Noto', sans-serif;
+    }
+
+    .tagline {
+      float: right;
+      max-width: 65%;
+    }
+
+    .tagline p {
+      margin-top: 0px;
+    }
+
+    .debug {
+      /*border: 1px solid red;*/
+    }
+  </style>
+  <template>
+    <paper-material class="debug container" elevation="1">
+<!--     <div id="#dynamicHeight" class="debug splash">
+    </div> -->
+      <img class="debug rnd-img" src="../images/profile.png"/>
+<!--     </paper-material>
+    <paper-material class="text"> -->
+      <div class="debug tagline card">
+        <p class="debug" >I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</p>
+      </div>
+    </paper-material>
+  </template>
+</dom-module>
+<script>
+  Polymer ({
+    is: "profile-card",
+  })
+
+</script>

@@ -7,6 +7,7 @@
   <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
   <link rel="import" href="elements/builtin.html">
   <link rel="import" href="elements/project-halle.html">
+  <link rel="import" href="elements/profile-card.html">
 </head>
 
 <body class="fullbleed layout vertical">
@@ -29,11 +30,7 @@
         <div class="container">
           <iron-pages selected="{{page}}" valueattr="page-name">
             <section page-name="About">
-              <paper-material elevation="1">
-              <p>I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</p>
-
-              <p> I'm starting to dig in to client-side frameworks like Angular, React, and Twitter's Flight. I'm going to return to Python, a language I briefly studied before starting Dev Bootcamp. As a long-time Android geek, I'm also interested in exploring Java and Android development. Finally, Elixir and the Phoenix framework have piqued my interest lately. I'd love an opportunity to explore the world of functional programming.</p>
-            </paper-material>
+              <profile-card></profile-card>
             </section>
             <section page-name="Projects">
               <paper-material elevation="1">

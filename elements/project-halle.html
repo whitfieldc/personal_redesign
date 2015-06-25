@@ -4,17 +4,19 @@
     h1 {
       display: inline-block;
       position: absolute;
-      top: 0px;
+      top: .35em;
       margin: 0.35em;
     }
 
     .paper-font-display2 {
-      @apply(--paper-font-display2);
+      @apply(--paper-font-display3);
     }
 
     #halle_icon {
       width: 8em;
       display: inline-block;
+      margin-left: 1em;
+      margin-top: 1em;
     }
 
     img.playstore_icon {
@@ -23,7 +25,8 @@
       width: 7em;
       /*float: right;*/
       top: 0px;
-      margin: .75em;
+      margin: .9em;
+      margin-left: 1.4em;
       /*right: 0px;*/
     }
 
@@ -35,11 +38,11 @@
 
     .tech-list {
       font-family: 'Roboto', 'Noto', sans-serif;
-      font-size: 1.25em;
+      font-size: 1.1em;
       font-weight: 500;
     }
 
-    .container {
+    .body-container {
       padding: 0px;
     }
 
@@ -54,20 +57,21 @@
       <div class="debug header">
         <img id="halle_icon" class="debug" src="../images/halleplayicon.png"/>
         <h1 class="paper-font-display2 debug">Halle</h1>
-        <a id="playstore_link" href="https://play.google.com/store/apps/details?id=com.halle.parking">
+        <a id="playstore_link" href="https://play.google.com/store/apps/details?id=com.halle.parkit" target="_blank">
         <img class="debug playstore_icon"
               alt="Android app on Google Play"
               src="../images/play_store.png" /></a>
       </div>
     </div>
+    <div class="debug body-container">
     <paper-item class="debug body">
       <paper-item-body class="debug tech-list">
-      <iron-icon icon="device:storage"></iron-icon> Apache Cordova | Rails-API | jQuery | jQuery Mobile | Google Maps API | Firebase | Facebook OAuth
+      <!-- <iron-icon icon="chevron-right"></iron-icon>  -->Apache Cordova | Rails-API | jQuery | jQuery Mobile | Google Maps API | Firebase | Facebook OAuth
       </paper-item-body>
     </paper-item>
     <paper-item><paper-item-body>
       <div>Halle is an Android & iOS app designed to crowd-source information on parking spaces for drivers in urban areas. The application is built in Javascript with a Rails-API backend, utilizing Apache Cordova, jQuery Mobile, Google Maps API, Firebase and Facebook OAuth to bring users a live-updating true mobile experience.</div>
-      <a href="http://mobt.me/BlJo">Try it in a mobile emulator here</a></paper-item>
+      <a href="http://mobt.me/BlJo">Try it in a mobile emulator here</a></paper-item-body></paper-item>
     <paper-item class="thumbnail">
       <paper-item-body two-line>
       <div>Halle main UI</div>
@@ -80,6 +84,7 @@
       <div secondary> <img id="halle_add_thumb" src="../images/halle_add_small.png" /></div>
       </paper-item-body>
     </paper-item>
+    </div>
   </template>
 </dom-module>
 <script>
