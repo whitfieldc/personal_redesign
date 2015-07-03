@@ -4,7 +4,8 @@
   <style>
     paper-material.container {
       padding: .5em;
-      background-color: #C5CAE9;
+      overflow: hidden;
+      /*background-color: #C5CAE9;*/
     }
 /*    .splash {
       margin: 0px;
@@ -39,6 +40,12 @@
       margin-top: 0px;
     }
 
+    .name {
+      font-size: 3em;
+      margin: 0px;
+      margin-bottom: .1em;
+    }
+
     .debug {
       /*border: 1px solid red;*/
     }
@@ -51,7 +58,13 @@
 <!--     </paper-material>
     <paper-material class="text"> -->
       <div class="debug tagline card">
-        <p class="debug" >I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</p>
+        <p class="debug name" >
+          Hi, I'm Charlie
+        </p>
+        <p class="debug">
+          I'm a software engineer who used to teach English in Korea. Before that, I taught English journalists about American politics.</p>
+        <p class="debug">
+          I'm a curious puzzle-solver who enjoys poring over server logs and error messages. I'm an enthusiastic teammate and a patient communicator. I have a near-compulsive desire to explore, in the words of one US president, "the uncrossed desert and the unclimbed ridge."</p>
       </div>
     </paper-material>
   </template>
